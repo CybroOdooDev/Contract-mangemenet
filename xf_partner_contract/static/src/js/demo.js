@@ -18,12 +18,15 @@ patch(components.demo, 'xf_partner_contract.demo', {
      */
     _getFileUploadRoute() {
         console.log('demo1')
+        var url;
         if (this.context.active_ids && this.context.active_model=='xf.partner.contract')  {
             var active_id = this.context.active_ids[0];
-        }else{
-            var active_id = 0;
+            url = ('/documents/upload_attachment/'+ active_id);
+        }
+        else{
+            url = ('/documents/upload_attachment/');
         };
-        var url = ('/documents/upload_attachment/'+ active_id);
+
         return url;
     },
 
