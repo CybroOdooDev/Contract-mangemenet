@@ -8,7 +8,7 @@ from odoo.addons.documents.controllers.main import ShareRoute
 from odoo.http import request
 
 class DocumentController(ShareRoute):
-    @http.route("/documents/upload_attachment/<int:act_id>", type='http', methods=['POST'], auth="user")
+    @http.route("/documents/upload_attachment/<int:act_id>", type='http', methods=['POST'], auth="user", csrf=False)
     def upload_document_active_id(self,act_id, folder_id, ufile, tag_ids, document_id=False, partner_id=False, owner_id=False):
 
         files = request.httprequest.files.getlist('ufile')

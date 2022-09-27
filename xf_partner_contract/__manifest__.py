@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Contract Management',
-    'version': '15.0.1.1.0',
+    'version': '15.0.1.1.1',
     'summary': """
     This module helps to manage/approve/renew contracts
     , purchase contract 
